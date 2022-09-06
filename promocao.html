@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promoção</title>
+   
+    
+</head>
+<body>
+    
+    <style>
+        body {
+          background-image:url(imagem/beautiful-girl-beautiful-woman-portrait-black-background-3840x2560-2937.jpg);
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100%;
+          color:white;
+          font-family: 'Dancing Script', cursive;
+          font-size: 22px;
+          font-weight: bolder;
+                 }
+          #cadastro-text {
+            margin: 80px;
+           }
+           .button {
+        background-color: #ffffff; /* Green */
+        border: none;
+        color: #000000;
+        padding: 10px 25px;
+        border-radius:20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        font-family: 'Merriweather', serif;
+         }
+
+  .button:hover{
+    background-color: #000000; 
+    color: #ffffff;
+    border: 1px solid white;
+        }
+
+    .titulo {
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    #cadastro-text {
+        margin: 1px 250px 50px 100px;
+    }
+    
+    /* modal*/
+    .modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+/* conteúdo*/
+p {
+  background-color: #010101;
+  margin: auto;
+  padding: 20px;
+  border: 2px solid rgb(255, 253, 253);
+  border-radius: 20px;
+  width: 80%;
+  color:rgb(255, 255, 255);
+  text-align: center;
+}
+
+/* fechar */
+.close {
+  color: #ff0000;
+  float: right;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+
+        </style>
+
+<h1 class="titulo" align="center">Agendamento</h1>
+<hr>
+<div id="cadastro" align="right">
+    
+    <div id="cadastro-text">
+        <form onsubmit="return false;">
+    <label >e-mail</label> <br>
+    <input type = "email" id="email" placeholder="usuáriologin@servidor.com"/>
+    <br>
+    <br>
+
+    <label><b>senha</b></label><br>
+    <input type="password" placeholder="Senha" name="psw" id="psw" required><br><br>
+    
+    <form action="/action_page.php">
+      <label for="cars">profissional</label><br>
+      <select name="cars" id="cars">
+        <option value="volvo">Fulano</option>
+        <option value="saab">Beltrano</option>
+        <option value="opel">Fulana</option>
+        <option value="audi">Beltrana</option>
+      </select>
+    </form>
+      <br>
+          
+    <label>data</label> <br/>
+    <input type="date" id="data" placeholder="XX/XX/XXXX"/><br/> <br>
+
+    <label>horário</label> <br/>
+    <input type="time" id="horario" placeholder="XX/XX/XXXX"/><br/> <br>
+        
+    <button class="button" id="myBtn" onclick="dados();">Enviar</button> 
+        </input>
+        </form>
+      <hr>  
+        
+    </div>
+    <hr/>
+        
+</div>
+   
+<!-- modal -->
+
+
+
+<div id="myModal" class="modal">
+
+  <!-- conteúdo -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Ficamos muito felizes e agradecidos com a preferência. Assim que confirmarmos todas as informações do agendamento, inclusive a data e horário, retornaremos o contato. ;)</p>
+  </div>
+
+</div>
+
+<script>
+
+var modal = document.getElementById("myModal");
+
+
+var btn = document.getElementById("myBtn");
+
+
+var span = document.getElementsByClassName("close")[0];
+
+ 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+    
+</body>
+</html>

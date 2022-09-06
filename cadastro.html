@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastros</title>
+    <link href="css/estilo.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+    <h1 class="titulo" align="center">Cadastro</h1>
+    <hr>
+    <div id="cadastro">
+        <img src="imagem/carrocel.jpg" style="width: 100%";>
+        <div id="cadastro-text">
+            <form onsubmit="return false;">
+            <label>Nome</label> <br>
+             <!--quebra de linha, o input vai para baixo-->
+        <input type="Text" id="nome" placeholder="Digite aqui o seu nome." maxlength="50"/> 
+        <br>
+        <br>
+        <label>E-mail</label> <br>
+        <input type = "email" id="email" placeholder="usuáriologin@servidor.com"/>
+        <br>
+        <br>
+        <label> Telefone </label> <br>
+        <input type = "number" id="telefone" placeholder="(00) XXXX-XXXX" maxlength="12"/>
+        <br/>
+        <br/>
+        <label>Sexo</label> <br>
+        <input type="radio" name ="sexo" id="sexo" valeu ="masculino"/> Masculino <br/>
+        <input type="radio" name="sexo"valeu ="feminino"/> Feminino <br/> 
+        <br/>
+        <label>Data de Nascimento</label> <br/>
+        <input type="date" id="nascimento" placeholder="XX/XX/XXXX"/><br/> <br>
+        
+        <label><b>Senha</b></label><br>
+        <input type="password" placeholder="Senha" name="psw" id="psw" required><br><br>
+    
+        <label></label> <b>Confirmação de Senha</b></label><br>
+        <input type="password" placeholder="Confirmação de Senha" name="psw-repeat" id="psw-repeat" required><br><br>
+        
+
+        <button class="button" onclick="dados();">Enviar</button> 
+            </input>
+            </form>
+          <hr>  
+            
+        </div>
+        <hr/>
+            <div id="result"></div>
+    </div>
+       
+        <script src="js/script.js"></script>
+</body>
+</html>
